@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 const EXPERIENCE = [
   {
-    role: "Agentic AI - Project Based Learning Participant",
+    role: "Agentic AI - Project Based Learning",
     company: "IBM",
     period: "July 2025 – August 2025",
     bullets: [
@@ -17,7 +17,7 @@ const EXPERIENCE = [
     skills: ["LangGraph", "Gemini API", "Python", "Streamlit", "RAG Pipelines", "NLP"],
   },
   {
-    role: "Data Analytics Summer Intern",
+    role: "Data Analytics Virtual internship",
     company: "IBM",
     period: "June 2024 – August 2024",
     bullets: [
