@@ -177,6 +177,23 @@ const projects = [
     ],
   },
   {
+    logo: "/healai.png",
+    title: "HealAi - AI-Powered Healthcare Ecosystem",
+    description:
+      "A medical command center combining Generative AI (Gemini 1.5 Pro) with localized verified clinics data, clinical OCR report analysis, and multilingual patient engagement. Won 1st Prize in the OSEN VIBECODE AI Hackathon (out of 500+ participants across India).",
+    images: ["/healai.png"],
+    tags: ["React", "TypeScript", "Framer Motion", "Gemini 1.5 Pro", "Supabase", "OCR Engine", "Tailwind CSS"],
+    demoUrl: "https://heal-ai-eight.vercel.app/",
+    githubUrl: "https://github.com/sudoSubh/HealAi",
+    features: [
+      "Awarded 1st Prize at OSEN VIBECODE AI Hackathon (500+ India) for excellence in AI implementation and UX",
+      "Context-aware AI Medical Assistant supporting multilingual communications in 50+ languages",
+      "Intelligence-driven Symptom Checker with emergency classification and condition probability matching",
+      "OCR medical report analysis extracting key metrics and translating complex terms into patient-friendly summaries",
+      "Verified local healthcare hub with a direct directions routing system to verified medical rooms"
+    ],
+  },
+  {
     logo: "/instastay.png",
     title: "Instastay - Hotel Booking System",
     description:
@@ -205,37 +222,6 @@ const projects = [
       "Built a real-time whiteboard for 50+ concurrent users using Socket.io and Node.js",
       "Designed secure room-based sessions handling 1K+ events per minute on backend",
       "Implemented drawing tools and live chat via HTML5 Canvas, boosting collaboration by 40%"
-    ],
-  },
-  {
-    logo: "/finlit.png",
-    title: "FinLit - Financial Literacy AI Agent",
-    description:
-      "An intelligent Financial Literacy AI Agent using LangGraph, Gemini API, and Plotly, designed for budgeting, scam prevention, and UPI guidance.",
-    images: ["/finlit.png"],
-    tags: ["Python", "LangGraph", "Gemini API", "Streamlit", "Plotly", "RAG Pipelines", "NLP"],
-    demoUrl: "https://github.com/sudoSubh/FinLit",
-    githubUrl: "https://github.com/sudoSubh/FinLit",
-    features: [
-      "Built an AI agent using LangGraph and Gemini API with NLP-driven query analysis",
-      "Developed agentic workflows in Python integrating LLM-powered response generation and financial calculators",
-      "Deployed an interactive Streamlit app with Plotly visualizations and a RAG-based retrieval pipeline from RBI sources"
-    ],
-  },
-  {
-    logo: "/healai.png",
-    title: "HealAi - AI-Powered Healthcare Ecosystem",
-    description:
-      "A medical command center combining Generative AI (Gemini 1.5 Pro) with localized verified clinics data, clinical OCR report analysis, and multilingual patient engagement.",
-    images: ["/healai.png"],
-    tags: ["React", "TypeScript", "Framer Motion", "Gemini 1.5 Pro", "Supabase", "OCR Engine", "Tailwind CSS"],
-    demoUrl: "https://heal-ai-eight.vercel.app/",
-    githubUrl: "https://github.com/sudoSubh/HealAi",
-    features: [
-      "Context-aware AI Medical Assistant supporting multilingual communications in 50+ languages",
-      "Intelligence-driven Symptom Checker with emergency classification and condition probability matching",
-      "OCR medical report analysis extracting key metrics and translating complex terms into patient-friendly summaries",
-      "Verified local healthcare hub with a direct directions routing system to verified medical rooms"
     ],
   },
   {

@@ -5,17 +5,39 @@ export async function POST(request) {
   try {
     const { name, email, message } = await request.json()
 
+    // Validate inputs
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { message: 'Name, email, and message are required fields.' },
+        { status: 400 }
+      )
+    }
+
+    // Check if email credentials are configured
+    const emailUser = process.env.EMAIL_USER
+    const emailPassword = process.env.EMAIL_PASSWORD
+
+    if (!emailUser || !emailPassword) {
+      console.error('Email configurations (EMAIL_USER/EMAIL_PASSWORD) are missing in the server environment.')
+      return NextResponse.json(
+        { 
+          message: 'Message sending is currently offline. Server environment variables (EMAIL_USER/EMAIL_PASSWORD) are not configured.' 
+        },
+        { status: 500 }
+      )
+    }
+
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
+        user: emailUser,
+        pass: emailPassword,
       },
     })
 
     // Email to you (original functionality)
     const mailOptionsToYou = {
-      from: process.env.EMAIL_USER,
+      from: emailUser,
       to: 'beherasubhasish2005@gmail.com',
       subject: `Subhasish | New message from ${name} (${email})`,
       text: message,
@@ -29,7 +51,7 @@ export async function POST(request) {
 
     // Confirmation email to user
     const mailOptionsToUser = {
-      from: process.env.EMAIL_USER,
+      from: emailUser,
       to: email,
       subject: 'Thank you for contacting Subhasish.',
       html: `
@@ -65,7 +87,7 @@ export async function POST(request) {
   } catch (error) {
     console.error('Error sending email:', error)
     return NextResponse.json(
-      { message: 'Failed to send email' },
+      { message: error instanceof Error ? error.message : 'Failed to send email' },
       { status: 500 }
     )
   }

@@ -2,6 +2,7 @@ import Hero from "@/components/hero"
 import Experience from "@/components/Experience"
 import Skills from "@/components/skills"
 import Projects from "@/components/projects"
+import Certifications from "@/components/certifications"
 import Contact from "@/components/contact"
 import Footer from "@/components/Footer"
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Skills />
        <Projects/>
       <Experience />
+      <Certifications />
        <Contact />
        <Footer />
     </div>
