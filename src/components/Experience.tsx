@@ -6,8 +6,18 @@ import { useRef } from "react";
 
 const EXPERIENCE = [
   {
+    role: "Web Development Intern",
+    company: "VaultofCodes",
+    period: "July 2025 – August 2025",
+    bullets: [
+      "Worked on real-world frontend projects during a 1 month remote internship, building a fully functional resume builder web application.",
+      "Gained hands-on experience in frontend development, UI architecture, and practical workflows while strengthening core JavaScript and responsive design skills."
+    ],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Responsive Design", "Frontend Development"],
+  },
+  {
     role: "Agentic AI - Project Based Learning",
-    company: "IBM",
+    company: "IBM SkillsBuild",
     period: "July 2025 – August 2025",
     bullets: [
       "Built a Financial Literacy AI Agent using LangGraph and Gemini API with NLP-driven query analysis for budgeting, scam prevention, and UPI guidance.",
@@ -18,12 +28,13 @@ const EXPERIENCE = [
   },
   {
     role: "Data Analytics Virtual internship",
-    company: "IBM",
+    company: "IBM SkillsBuild",
     period: "June 2024 – August 2024",
     bullets: [
       "Analyzed 100K+ real-world wildfire records using Python and machine learning techniques.",
-      "Identified 5+ high-impact environmental risk factors influencing wildfire spread.",
-      "Built interactive dashboards that improved data-driven decision accuracy by 30%."
+      "Built a Random Forest ML model predicting wildfire risk from environmental data with 97% train accuracy.",
+      "Engineered an end-to-end data pipeline covering feature engineering, model training, and evaluation.",
+      "Delivered risk classification insights from meteorological inputs to support data-driven environmental decisions."
     ],
     skills: ["Python", "Machine Learning", "Data Analytics", "Plotly", "Dashboards"],
   },
