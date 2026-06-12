@@ -28,7 +28,9 @@ export async function POST(request) {
     }
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true, // true for port 465, false for other ports
       auth: {
         user: emailUser,
         pass: emailPassword,
@@ -74,11 +76,15 @@ export async function POST(request) {
       `,
     }
 
-    // Send both emails
-    await Promise.all([
-      transporter.sendMail(mailOptionsToYou),
-      transporter.sendMail(mailOptionsToUser)
-    ])
+    // Send email to you (essential)
+    await transporter.sendMail(mailOptionsToYou)
+
+    // Send confirmation email to user (optional/best effort)
+    try {
+      await transporter.sendMail(mailOptionsToUser)
+    } catch (userMailError) {
+      console.warn('Failed to send confirmation email to user:', userMailError)
+    }
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
